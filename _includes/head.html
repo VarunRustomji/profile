@@ -1,0 +1,117 @@
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
+  <meta name="description" content="{% if page.description %}{{ page.description | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
+
+  <link rel="stylesheet" href="{{ "/assets/css/main.css" | prepend: site.baseurl }}">
+  <style>
+
+
+
+  #work{
+  background-color: #121212;
+  padding:3em 3em;
+}
+
+
+.test {
+  padding: 2em 2em 2em 2em;
+}
+
+/*//Copy Code*/
+.imgs{
+  height:50px;
+  max-width: 70px;
+
+}
+
+.card{
+  display: inline-grid;
+  background-color: #ddd;
+  border: #fff 0.5px solid;
+  border-radius: 0.2em;
+  margin: 8px;
+  height: 85px;
+  width: 85px;
+  box-shadow: 0 0 0.5em #fff;
+  opacity: 0.7;
+  -moz-transition: all 900ms ease-in;
+  -webkit-transition: all 900ms ease-in;
+  -o-transition: all 900ms ease-in;
+  transition: all 700ms cubic-bezier(.04,1.1,.46,1.56);
+}
+
+.card .imgs{
+  /*display: block;*/
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: auto;
+  margin-bottom: auto;
+  -moz-transition: all 900ms ease-in;
+  -webkit-transition: all 900ms ease-in;
+  -o-transition: all 900ms ease-in;
+  transition: all 700ms cubic-bezier(.04,1.1,.46,1.56);
+}
+.card .imgs{
+  filter: blur(1.5px) grayscale(80%);
+}
+.card:hover{
+  transform: scale(1.5, 1.5);
+
+}
+.card:hover .imgs{
+  filter: blur(0px) grayscale(0%);
+  opacity: 1;
+
+  @media (max-width : 380px) {
+
+	/*Work Section*/
+	#work{
+	  background-color: #121212;
+	  padding:5px;
+	}
+
+	.work-title h1 {
+	  font-size:9vw;
+	  margin-bottom:10px;
+	}
+
+	.imgs {
+	  height:50px;
+	  max-width: 70px;
+		opacity: 1;
+
+	}
+
+	.test {
+		opacity: 100%;
+		padding: 8px;
+		padding-bottom: 13px;
+	}
+
+	.card {
+		margin: 8px;
+		height: 70px;
+		width: 70px;
+	}
+
+	.card .imgs{
+	  filter: none;
+	}
+	.card:hover{
+	  transform: none;
+
+	}
+	.card:hover .imgs{
+	  filter: none;
+	  opacity: none;
+
+	}
+
+}
+}
+</style>
+</head>
